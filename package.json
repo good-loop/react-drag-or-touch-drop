@@ -1,0 +1,55 @@
+{
+  "name": "react-drag-or-touch-drop",
+  "version": "0.1.1",
+  "description": "Drag and drop for React - which supports touch too so it works on mobile.",
+  "main": "./bin/dragdrop-bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/good-loop/react-drag-or-touch-drop.git"
+  },
+  "homepage": "https://github.com/good-loop/react-drag-or-touch-drop#readme",
+  "keywords": [
+    "drag",
+    "drop",
+    "touch",
+    "react"
+  ],
+  "author": "@winterstein",
+  "license": "MIT",
+  "dependencies": {
+    "easy-enums": "^1.1.8"
+  },
+  "scripts": {
+    "compile": "webpack --config $PWD/webpack.config.js --progress --colors",
+    "build": "babel modules -d build/npm/modules --ignore '**/__tests__/**' --plugins transform-class-properties",
+    "clean": "rm -rf build/npm/modules",
+    "prepare": "npm run compile"
+  },
+  "devDependencies": {
+    "lodash": "^3.0.0",
+    "react": "^16.0.0",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/plugin-transform-typescript": "^7.11.0",
+    "@babel/polyfill": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-const-enum": "^1.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "shelljs": "^0.8.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
