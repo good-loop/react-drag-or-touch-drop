@@ -12,7 +12,7 @@ const webDir = process.env.OUTPUT_WEB_DIR || 'bin'; // output to bin
 
 const baseConfig = {
 	// NB When editing keep the "our code" entry point last in this list - makeConfig override depends on this position.
-	entry: ['@babel/polyfill', './src/js/DragDrop.jsx'],
+	entry: ['@babel/polyfill', './src/js/DragDrop.release.jsx'],
 	output: {
 		path: path.resolve(__dirname, './' + webDir + '/'), // just bin for DragDrop
 		// filename: is left undefined and filled in by makeConfig

@@ -1,8 +1,8 @@
 {
   "name": "react-drag-or-touch-drop",
   "version": "0.1.1",
-  "description": "Drag and drop for React - which supports touch too so it works on mobile.",
-  "main": "./bin/dragdrop-bundle.js",
+  "description": "Drag and drop for React - which supports touch too, so it works on mobile or desktop.",
+  "main": "./bin/js/DragDrop.release.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/good-loop/react-drag-or-touch-drop.git"
@@ -12,23 +12,23 @@
     "drag",
     "drop",
     "touch",
-    "react"
+	"react",
+	"dragndrop"
   ],
   "author": "@winterstein",
   "license": "MIT",
   "dependencies": {
-    "easy-enums": "^1.1.8"
   },
   "scripts": {
-    "compile": "webpack --config $PWD/webpack.config.js --progress --colors",
-    "build": "babel modules -d build/npm/modules --ignore '**/__tests__/**' --plugins transform-class-properties",
-    "clean": "rm -rf build/npm/modules",
-    "prepare": "npm run compile"
+    "build": "babel src -d bin",
+    "clean": "rm -rf bin/*",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "lodash": "^3.0.0",
     "react": "^16.0.0",
-    "@babel/core": "^7.11.6",
+    "@babel/core": "^7.12.9",
+    "@babel/cli": "^7.12.8",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
     "@babel/plugin-transform-react-jsx": "^7.10.4",
@@ -51,5 +51,18 @@
     "shelljs": "^0.8.4",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "peerDependencies": {
+    "react": "^15.5.4 || ^16.0.0",
+    "react-dom": "^15.5.4 || ^16.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ],
+    "plugins": [
+		"@babel/plugin-proposal-class-properties",
+		"@babel/plugin-proposal-object-rest-spread"
+    ]
   }
 }
