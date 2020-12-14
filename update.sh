@@ -8,4 +8,4 @@ cp /tmp/DragDrop.jsx src/js/DragDrop.release.jsx
 #cp ../wwappbase.js/base/utils/assert.js src/utils/
 #cp ../wwappbase.js/base/utils/miscutils.ts src/utils/
 #cp ../wwappbase.js/base/utils/printer.js src/utils/
- echo "TODO run build/compile/whatever"
+echo "TODO run build/compile/whatever"
